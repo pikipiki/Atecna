@@ -1,0 +1,81 @@
+body {
+  font-family: "Trebuchet MS"
+}
+
+$red:#D43219;
+$dark-grey:#E9E3DE;
+$yellow:#FCDF9E;
+
+.black{
+  color: black;
+}
+
+.red-imp{
+  color:$red !important;
+}
+
+.border-yellow{
+  border-bottom: 2px solid $yellow;
+}
+
+.dark-grey{
+  background-color: $dark-grey;
+}
+
+.bg-image{
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  width: 800px;
+  border: 1px solid black;
+}
+
+.text-indent{
+  text-indent: 50px;
+}
+
+// Open dropdowns on hover instead of click.
+
+@media (min-width: 768px) {
+  .dropdown:hover {
+    background: #e7e7e7;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+// The following is needed since the dropdowns are <div>
+// elements instead of <a> elements
+
+.nav > li > div {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  cursor: default;
+}
+.navbar-nav > li > div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+.navbar-default .navbar-nav > li > div {
+  color: rgb(119, 119, 119);
+}
+.navbar-collapse.collapse {
+  display: none;
+}
+.dropdown-open {
+  background: #e7e7e7;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
