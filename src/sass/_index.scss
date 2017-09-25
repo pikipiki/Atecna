@@ -1,21 +1,58 @@
-body {
-  font-family: "Trebuchet MS"
-}
-
 $red:#D43219;
-$dark-grey:#E9E3DE;
-$yellow:#FCDF9E;
+$light-grey:#F2EEEB;
+$dark-grey:grey;
+$yellow:#FCDF9E; 
+
+body {
+  font-family: "Trebuchet MS";
+}
 
 .black{
   color: black;
+}
+
+.white{
+  color: white;
+}
+
+.yellow{
+  color:$yellow;
+}
+
+.bg-white{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.bg-red{
+  background-color: $red;
 }
 
 .red-imp{
   color:$red !important;
 }
 
+.grad-grey{
+background: #e5e5e5; /* Old browsers */
+background: -moz-linear-gradient(top,  #e5e5e5 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e5e5e5 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e5e5e5 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.grad-red{
+  background: #a90329; /* Old browsers */
+  background: -moz-linear-gradient(top,  #a90329 0%, #ad1417 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #a90329 0%,#ad1417 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #a90329 0%,#ad1417 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#ad1417',GradientType=0 ); /* IE6-9 */
+}
+
 .border-yellow{
-  border-bottom: 2px solid $yellow;
+  border-bottom: 3px solid $yellow;
+}
+
+.border-dark-grey{
+  border-left: 3px solid $dark-grey;  
 }
 
 .dark-grey{
@@ -33,23 +70,13 @@ $yellow:#FCDF9E;
   border: 1px solid black;
 }
 
+.footer{
+  width: 800px;
+}
+
 .text-indent{
-  text-indent: 50px;
+  text-indent: 25px;
 }
-
-// Open dropdowns on hover instead of click.
-
-@media (min-width: 768px) {
-  .dropdown:hover {
-    background: #e7e7e7;
-  }
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-}
-
-// The following is needed since the dropdowns are <div>
-// elements instead of <a> elements
 
 .nav > li > div {
   position: relative;
@@ -65,12 +92,6 @@ $yellow:#FCDF9E;
 .navbar-default .navbar-nav > li > div {
   color: rgb(119, 119, 119);
 }
-.navbar-collapse.collapse {
-  display: none;
-}
-.dropdown-open {
-  background: #e7e7e7;
-}
 
 input:invalid {
   border: 2px dashed red;
@@ -78,4 +99,16 @@ input:invalid {
 
 input:valid {
   border: 2px solid black;
+}
+
+#navbar{
+  background: #a90329; /* Old browsers */
+  background: -moz-linear-gradient(top,  #a90329 0%, #ad1417 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #a90329 0%,#ad1417 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #a90329 0%,#ad1417 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#ad1417',GradientType=0 ); /* IE6-9 */
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+  color: $yellow;
 }
