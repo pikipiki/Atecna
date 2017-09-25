@@ -1,3 +1,5 @@
+// no padding, no margins
+
 .no-margin{
   margin: 0;
 }
@@ -5,6 +7,8 @@
 .no-padding{
   padding:0;
 }
+
+// font-sizes
 
 .fz-1-0{
   font-size: 1.0rem;
@@ -17,6 +21,8 @@
 .fz-1-8{
   font-size: 1.8rem;
 }
+
+// paddings
 
 .pl-0-5{
   padding-left: 0.5rem;
@@ -33,6 +39,8 @@
 .pl-5{
   padding-left: 5rem;
 }
+
+// helpers
 
 .underline{
   text-decoration: underline;

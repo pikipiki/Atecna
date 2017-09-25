@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA Compatible" content="IE-edge">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Atecna</title>
   </head>
+
   <body class="bg-image">
+
     <div class="container bg-white no-padding">
       <header class="row grad-grey no-margin">
         <div class="col-md-3">
@@ -28,12 +31,12 @@
             </div> <!--/.col-md-10 -->
           </div> <!--/.row-->
         </div> <!--/.col-md-5 -->
-        <div class="col-md-4">
+        <div class="col-md-4 border-black">
           <div class="row">
             <div class="col-md-2">
                <img src="img/logo-small.jpg">
             </div>
-            <div class="col-md-10 border-grey">
+            <div class="col-md-10">
               <p class="no-margin">PARIS</p>
               <small class="no-margin">60 rue de Londres 75008 Paris</small>
               <p class="no-margin">
@@ -46,7 +49,7 @@
       </header>
 
       <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container-fluid no-padding">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -60,11 +63,11 @@
           </div> <!--/.navbar-header -->
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#"><span class="white">Qui sommes-nous ?</span></a></li>
-              <li><a href="#"><span class="white">Nos prestations</span></a></li>
-              <li><a href="#"><span class="white">Nos réalisations</span></a></li>
-              <li><a href="#"><span class="white">Recutement</span></a></li>
-              <li><a href="#"><span class="white">Contact</span></a></li>
+              <li class="active"><a href="#"><span class="white"><strong>Qui sommes-nous </strong>?</span></a></li>
+              <li><a href="#"><span class="white"><strong>Nos prestations</strong></span></a></li>
+              <li><a href="#"><span class="white"><strong>Nos réalisations</strong></span></a></li>
+              <li><a href="#"><span class="white"><strong>Recutement</strong></span></a></li>
+              <li><a href="#"><span class="white"><strong>Contact</strong></span></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -79,8 +82,11 @@
         </div>
         
         <div class="content">
+
           <h1 class="border-yellow border-dark-grey red-imp fz-1-8 pl-0-5"><strong>La vision de l’entreprise pour 2012</strong></h1>
+
           <div class="row">
+
             <div class="col-md-6">
               <ul class="pl-2">
                 <li class="red-imp"><strong class="black">Lorem ipsum dolor sit amet</strong></li>
@@ -99,6 +105,7 @@
                 </p>
               </ul>
             </div> <!--/.col-md-6 -->
+
             <div class="col-md-6 text-center">
               <div class="row">
                 <div class="col-md-12">
@@ -108,17 +115,21 @@
                 </div> <!--/.col-md-12 -->
               </div> <!--/.row -->
               <div class="row inline-block">
-                <span class="glyphicon glyphicon-menu-left" onclick="plusDivs(-1)"></span>
-                <img class="mySlides" src="img/carrousel-1.jpg">
-                <img class="mySlides" src="img/carrousel-2.jpg">
-                <span class="glyphicon glyphicon-chevron-right" onclick="plusDivs(1)"></span>
+                <img class="mySlides img-responsive" src="img/carrousel-1.jpg">
+                <img class="mySlides img-responsive" src="img/carrousel-2.jpg">
+                <img class="mySlides img-responsive" src="img/carrousel-3.jpg">
+                <img class="mySlides img-responsive" src="img/carrousel-4.jpg">
+                <button onclick="plusDivs(-1)">Précedent</button>
+                <button onclick="plusDivs(1)">Suivant</button>
                 <small class="red-imp">Comprendre votre besoin</small>
               </div> <!--/.row -->
             </div> <!--/.col-md-6 -->
+
           </div> <!--/.row -->
+
         </div> <!--/.content -->
 
-        <div class="form">
+        <div class="form" id="formId">
           <h1 class="border-yellow border-dark-grey red-imp fz-1-8 pl-0-5"><strong>Besoin de plus d'informations ?</strong></h1>
           <li class="red-imp"><strong class="black">Lorem ipsum dolor sit amet</strong></li>
           <p class="text-indent">
@@ -128,37 +139,46 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control" id="nom" placeholder="Votre nom" pattern="[A-z]">
+                  <input type="text" class="form-control" id="lastName" placeholder="Votre nom" required>
+                  <div id="errorValidatorLastName"></div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" pattern="[a-zA-Z]">
+                  <input type="text" class="form-control" id="firstName" placeholder="Votre prénom" required>
+                  <div id="errorValidatorFirstName"></div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" id="email" placeholder="Adresse E-mail" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/">
+                  <input type="email" class="form-control" id="email" placeholder="Adresse E-mail" required>
+                  <div id="errorValidatorEmail"></div>
                 </div>
               </div> <!--/.col-md-6 -->
               <div class="col-md-6">
                 <div class="form-group">
-                  <textarea class="form-control" rows="3" placeholder="Expliquez ici votre demande"></textarea>
+                  <textarea class="form-control" id="text" rows="3" placeholder="Expliquez ici votre demande" required></textarea>
+                  <div id="errorValidatorText"></div>
                 </div>
-                <button type="submit" class="btn btn-default grad-red white pull-right">Envoyer</button>
+                <button id="submitButton" type="submit" class="btn btn-default grad-red white pull-right" onclick="return valid()">Envoyer</button>
               </div> <!--/.col-md-6 -->
             </div> <!--/.row -->
           </form>
         </div> <!--/.form -->
-      </div>
+
+      </div> <!--/.content-container -->
+
       <div class="grad-grey text-center">
         <small class="red">
           <p class="red-imp no-margin">Atecna Conseil & Ingénierie E-business, 71 avenue Guynemer 59700 Marcq en Baroeul.</p>
           <p class="no-margin"><span class="red-imp">Tel. : </span>03 20 89 84 50 - <span class="red-imp">Email : </span>contact@atecna.fr</p>
         </small>
       </div>
+
     </div> <!--/.container -->
 
     <footer class="text-center">
       <small>©Atecna - Conseil & Ingénierie E-business</small>
     </footer>
+
     <script src="js/vendor.min.js"></script>
     <script src="js/bundle.min.js"></script>
+
   </body>
 </html>

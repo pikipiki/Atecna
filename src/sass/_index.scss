@@ -1,11 +1,17 @@
+// vars
+
 $red:#D43219;
 $light-grey:#F2EEEB;
 $dark-grey:grey;
 $yellow:#FCDF9E; 
 
+// font
+
 body {
   font-family: "Trebuchet MS";
 }
+
+// colors
 
 .black{
   color: black;
@@ -19,6 +25,16 @@ body {
   color:$yellow;
 }
 
+.red-imp{
+  color:$red !important;
+}
+
+.dark-grey{
+  background-color: $dark-grey;
+}
+
+// background-colors
+
 .bg-white{
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -27,9 +43,7 @@ body {
   background-color: $red;
 }
 
-.red-imp{
-  color:$red !important;
-}
+// gradiants
 
 .grad-grey{
 background: #e5e5e5; /* Old browsers */
@@ -47,6 +61,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', end
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#ad1417',GradientType=0 ); /* IE6-9 */
 }
 
+// colored-borders
+
 .border-yellow{
   border-bottom: 3px solid $yellow;
 }
@@ -55,15 +71,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', end
   border-left: 3px solid $dark-grey;  
 }
 
-.dark-grey{
-  background-color: $dark-grey;
+.border-black{
+  border-left: 3px black;
 }
+
+// background-image
 
 .bg-image{
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+// setting container and foot dimensions
 
 .container{
   width: 800px;
@@ -74,9 +94,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', end
   width: 800px;
 }
 
+// indentation for paragraphs
+
 .text-indent{
   text-indent: 25px;
 }
+
+// form validation colors
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+textarea:invalid {
+  border: 2px dashed red;
+}
+
+textarea:valid {
+  border: 2px solid black;
+}
+
+// overwritting bootstrap classes
 
 .nav > li > div {
   position: relative;
@@ -93,14 +135,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', end
   color: rgb(119, 119, 119);
 }
 
-input:invalid {
-  border: 2px dashed red;
-}
-
-input:valid {
-  border: 2px solid black;
-}
-
 #navbar{
   background: #a90329; /* Old browsers */
   background: -moz-linear-gradient(top,  #a90329 0%, #ad1417 100%); /* FF3.6-15 */
@@ -110,5 +144,5 @@ input:valid {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-  color: $yellow;
+  background-color: #EDB72F;
 }
